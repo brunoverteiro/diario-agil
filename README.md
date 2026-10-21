@@ -21,18 +21,6 @@ diario-agil/
     └── img/favicon.svg
 ```
 
-## Como publicar no GitHub Pages
-
-1. Entre no GitHub e clique em **New repository**.
-2. Dê um nome (ex.: `diario-agil`), deixe como **Public** e clique em **Create repository**.
-3. Na página do repositório, clique em **uploading an existing file** (ou **Add file > Upload files**).
-4. Arraste **o conteúdo** da pasta `diario-agil` (o `index.html`, a pasta `posts`, a pasta `assets` e este README), e não a pasta em si. O `index.html` precisa ficar na raiz do repositório.
-5. Clique em **Commit changes**.
-6. Vá em **Settings > Pages**. Em **Build and deployment**, escolha **Deploy from a branch**, branch **main** e pasta **/ (root)**. Clique em **Save**.
-7. Aguarde 1 ou 2 minutos e recarregue a página. O link aparece no topo: `https://SEU-USUARIO.github.io/diario-agil/`
-
-Esse é o link para postar no Google Sala de Aula.
-
 ## Como editar
 
 - **Texto de um post:** abra o arquivo em `posts/`, troque o texto entre as tags `<p>` e `</p>` e salve. No GitHub, dá para editar direto no navegador clicando no arquivo e no ícone de lápis.
