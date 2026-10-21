@@ -1,0 +1,351 @@
+/* ==========================================================
+   Diário Ágil — Equipe 2 — Engenharia de Software II
+   Estilo: tipografia + espaço em branco, coluna única
+   ========================================================== */
+
+/* ---------- Cores e fontes (modo claro) ---------- */
+:root {
+  --bg: #FAF8F5;           /* off-white quente */
+  --text: #1F1F1F;         /* texto principal */
+  --muted: #6B6560;        /* datas, legendas */
+  --accent: #B5532A;       /* terracota */
+  --accent-soft: #F4E7DF;  /* fundo de destaques */
+  --border: #E6E0D8;       /* linhas finas */
+  --surface: #FFFFFF;      /* caixas dos diagramas */
+
+  --serif: "Merriweather", Georgia, "Times New Roman", serif;
+  --sans: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --measure: 42rem;        /* largura da coluna de texto */
+}
+
+/* ---------- Modo escuro automático ---------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #191715;
+    --text: #ECE7E1;
+    --muted: #A39B93;
+    --accent: #E2865C;
+    --accent-soft: #2E231D;
+    --border: #35302B;
+    --surface: #221F1C;
+  }
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 48rem) {
+  body { font-size: 1.125rem; }
+}
+
+::selection { background: var(--accent-soft); color: var(--text); }
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:hover { text-decoration-thickness: 2px; }
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- Cabeçalho do site ---------- */
+.site-header {
+  padding: 3rem 0 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.site-tagline {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin-top: 1.25rem;
+}
+
+.site-nav a {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+}
+.site-nav a:hover,
+.site-nav a[aria-current="page"] { color: var(--accent); }
+
+/* ---------- Página inicial ---------- */
+.intro { padding: 4rem 0 1rem; }
+
+.intro h1 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.25rem;
+}
+
+.intro p { color: var(--muted); margin: 0; }
+
+.post-list {
+  list-style: none;
+  margin: 2.5rem 0 0;
+  padding: 0;
+}
+
+.post-list li {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.post-list h2 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  line-height: 1.35;
+  margin: 0.4rem 0 0.75rem;
+}
+
+.post-list h2 a { color: var(--text); text-decoration: none; }
+.post-list h2 a:hover { color: var(--accent); }
+
+.post-list p { margin: 0 0 0.9rem; }
+
+.read-more {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ---------- Metadados (data, autor, tempo) ---------- */
+.post-meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+.post-meta .sep { margin: 0 0.4rem; opacity: 0.6; }
+
+.kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0;
+}
+
+/* ---------- Post ---------- */
+.post-header { padding: 4rem 0 2.5rem; }
+
+.post-header h1 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(2rem, 5.5vw, 2.8rem);
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.lede {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin: 0 0 1.75rem;
+}
+
+.post-body h2 {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  line-height: 1.35;
+  margin: 3.5rem 0 1rem;
+}
+
+.post-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 2.25rem 0 0.5rem;
+}
+
+.post-body p { margin: 0 0 1.4rem; }
+
+.post-body ul,
+.post-body ol { margin: 0 0 1.6rem; padding-left: 1.4rem; }
+
+.post-body li { margin-bottom: 0.55rem; }
+.post-body li::marker { color: var(--accent); }
+
+.post-body strong { font-weight: 700; }
+
+.post-body abbr { text-decoration: none; border-bottom: 1px dotted var(--muted); }
+
+/* Caixa de resumo */
+.resumo {
+  margin: 3rem 0;
+  padding: 1.5rem 1.75rem;
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+}
+.resumo h2,
+.resumo h3 { margin-top: 0; font-family: var(--serif); font-size: 1.2rem; }
+.resumo p:last-child,
+.resumo ul:last-child { margin-bottom: 0; }
+
+/* Citação */
+blockquote {
+  margin: 2.5rem 0;
+  padding: 0 0 0 1.5rem;
+  border-left: 2px solid var(--accent);
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--text);
+}
+
+/* ---------- Tabelas ---------- */
+.table-wrap {
+  overflow-x: auto;
+  margin: 2rem 0 2.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.85rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+thead th {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+tbody th { font-weight: 700; width: 24%; }
+
+/* ---------- Diagramas SVG ---------- */
+.diagram { margin: 3rem 0; }
+
+.diagram-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+.diagram svg {
+  display: block;
+  width: 100%;
+  min-width: 34rem;
+  height: auto;
+}
+
+.diagram figcaption {
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.dg-box rect   { fill: var(--surface); stroke: var(--border); stroke-width: 1.5; }
+.dg-hi         { fill: var(--accent-soft) !important; stroke: var(--accent) !important; stroke-width: 2 !important; }
+.dg-text       { fill: var(--text); font-family: var(--sans); font-size: 15px; font-weight: 600; }
+.dg-strong     { fill: var(--text); font-family: var(--serif); font-size: 19px; font-weight: 700; }
+.dg-small      { fill: var(--muted); font-family: var(--sans); font-size: 12.5px; }
+.dg-line       { stroke: var(--accent); stroke-width: 1.75; fill: none; }
+.dg-dashed     { stroke-dasharray: 6 5; }
+.dg-arrowhead  { fill: var(--accent); }
+
+/* ---------- Navegação entre posts ---------- */
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 4rem 0 0;
+  padding: 2rem 0 0;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.post-nav a { text-decoration: none; font-weight: 600; }
+.post-nav span {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+.post-nav .next { text-align: right; margin-left: auto; }
+
+/* ---------- Referências ---------- */
+.referencias {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.referencias li { margin-bottom: 0.8rem; }
+
+/* ---------- Equipe ---------- */
+.membros { list-style: none; padding: 0 !important; margin: 2rem 0 2.5rem; }
+.membros li {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border);
+  margin: 0 !important;
+}
+.membros li:last-child { border-bottom: 1px solid var(--border); }
+.membros strong { font-family: var(--serif); display: block; }
+.membros span { font-size: 0.9rem; color: var(--muted); }
+
+/* ---------- Rodapé ---------- */
+.site-footer {
+  margin-top: 5rem;
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.site-footer p { margin: 0 0 0.3rem; }

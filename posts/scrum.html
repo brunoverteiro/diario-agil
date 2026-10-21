@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scrum: entregando valor em ciclos curtos · Diário Ágil</title>
+  <meta name="description" content="O que é o Scrum, seus pilares, valores, papéis, eventos e artefatos.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="site-header">
+      <a class="site-title" href="../index.html">Diário Ágil</a>
+      <p class="site-tagline">Scrum e DSDM explicados pela Equipe 2 · Engenharia de Software II</p>
+      <nav class="site-nav" aria-label="Menu principal">
+        <a href="../index.html">Início</a>
+        <a href="scrum.html" aria-current="page">Scrum</a>
+        <a href="dsdm.html">DSDM</a>
+        <a href="comparativo.html">Comparativo</a>
+        <a href="equipe.html">Equipe</a>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <header class="post-header">
+          <p class="kicker">Método ágil 1</p>
+          <h1>Scrum: entregando valor em ciclos curtos</h1>
+          <p class="post-meta">
+            <time datetime="2026-10-21">21 de outubro de 2026</time><span class="sep">·</span>por Bruno Reis Verteiro<span class="sep">·</span><span data-reading-time>6 min de leitura</span>
+          </p>
+        </header>
+
+        <div class="post-body" data-post-body>
+
+          <p class="lede">Em vez de planejar o software inteiro no início e entregar tudo no fim, o Scrum divide o trabalho em ciclos curtos. A cada ciclo, a equipe entrega algo que funciona, mostra para quem vai usar e ajusta o rumo.</p>
+
+          <h2>O que é o Scrum</h2>
+
+          <p>O Scrum é um <strong>framework</strong> leve para equipes que trabalham com problemas complexos, ou seja, situações em que não dá para prever tudo no começo. Ele não diz como programar, testar ou documentar. Ele define uma estrutura mínima de papéis, eventos e artefatos, e a equipe preenche essa estrutura com as práticas que fizerem sentido para ela.</p>
+
+          <p>O Scrum foi criado por <strong>Ken Schwaber e Jeff Sutherland</strong> e apresentado oficialmente em 1995, na conferência OOPSLA, nos Estados Unidos. O nome vem do rúgbi: o <em>scrum</em> é a formação em que o time inteiro empurra a bola junto. A comparação com o rúgbi já tinha aparecido em 1986, num artigo de Hirotaka Takeuchi e Ikujiro Nonaka sobre empresas que desenvolviam produtos com equipes pequenas e integradas.</p>
+
+          <p>As regras oficiais estão no <strong>Guia do Scrum</strong>, um documento curto e gratuito mantido pelos próprios criadores. A versão mais recente é de novembro de 2020.</p>
+
+          <h2>A base: empirismo</h2>
+
+          <p>O Scrum parte da ideia de que o conhecimento vem da experiência. Em vez de tentar acertar tudo no planejamento, a equipe faz uma parte, observa o resultado e decide o próximo passo. Isso se apoia em três pilares:</p>
+
+          <ul>
+            <li><strong>Transparência:</strong> o trabalho e o progresso ficam visíveis para todos os envolvidos, inclusive os problemas.</li>
+            <li><strong>Inspeção:</strong> a equipe confere com frequência o que está sendo produzido e se está indo na direção certa.</li>
+            <li><strong>Adaptação:</strong> quando algo sai do esperado, o ajuste é feito o quanto antes, sem esperar o fim do projeto.</li>
+          </ul>
+
+          <p>Para que esses pilares funcionem, o Guia do Scrum aponta cinco <strong>valores</strong> que a equipe deve viver no dia a dia: <strong>comprometimento</strong> com as metas, <strong>foco</strong> no trabalho da Sprint, <strong>abertura</strong> sobre o trabalho e as dificuldades, <strong>respeito</strong> entre os membros e <strong>coragem</strong> para fazer o que é certo e enfrentar problemas difíceis.</p>
+
+          <h2>O Time Scrum</h2>
+
+          <p>O time é pequeno, normalmente com <strong>10 pessoas ou menos</strong>. É multifuncional, ou seja, reúne todas as habilidades necessárias para entregar o produto, e é autogerenciável: decide internamente quem faz o quê. Não existem sub-times nem hierarquia. Dentro dele há três responsabilidades:</p>
+
+          <h3>Product Owner (dono do produto)</h3>
+          <p>É a pessoa responsável por maximizar o valor do produto. Ele cuida do Product Backlog: decide o que entra, explica cada item e define a ordem de prioridade. É sempre <strong>uma pessoa</strong>, não um comitê, ainda que represente a opinião de vários interessados.</p>
+
+          <h3>Scrum Master</h3>
+          <p>É responsável por fazer o Scrum funcionar. Ensina o framework para a equipe e para a organização, ajuda a remover impedimentos e garante que os eventos aconteçam e sejam produtivos. Não é um chefe: o Guia o descreve como um líder que serve à equipe.</p>
+
+          <h3>Developers (desenvolvedores)</h3>
+          <p>São as pessoas que constroem o produto em cada Sprint, não apenas programadores, mas também testadores, designers ou quem mais for necessário. Eles montam o plano da Sprint, garantem a qualidade seguindo a Definição de Pronto e ajustam o plano todos os dias.</p>
+
+          <h2>Os cinco eventos</h2>
+
+          <p>Todos os eventos do Scrum têm duração máxima definida, o chamado <strong>timebox</strong>. Os tempos abaixo valem para uma Sprint de um mês; em Sprints menores, os eventos costumam ser mais curtos.</p>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Evento</th><th>Duração máxima</th><th>Para que serve</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Sprint</th><td>1 mês</td><td>O ciclo que contém todos os outros eventos. Ao final, existe pelo menos um incremento utilizável.</td></tr>
+                <tr><th scope="row">Sprint Planning</th><td>8 horas</td><td>Definir por que a Sprint é valiosa (a Meta da Sprint), o que será feito e como será feito.</td></tr>
+                <tr><th scope="row">Daily Scrum</th><td>15 minutos</td><td>Reunião diária dos Developers para inspecionar o progresso rumo à meta e ajustar o plano do dia.</td></tr>
+                <tr><th scope="row">Sprint Review</th><td>4 horas</td><td>Mostrar o resultado aos interessados, receber feedback e decidir os próximos passos do produto.</td></tr>
+                <tr><th scope="row">Sprint Retrospective</th><td>3 horas</td><td>Olhar para a forma de trabalhar (pessoas, ferramentas, processo) e escolher melhorias.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Os três artefatos</h2>
+
+          <p>Os artefatos tornam o trabalho visível. Desde 2020, cada um está ligado a um <strong>compromisso</strong>, que serve como referência para medir o progresso:</p>
+
+          <ul>
+            <li><strong>Product Backlog</strong> → compromisso: <strong>Meta do Produto</strong>. É a lista ordenada de tudo o que pode ser feito no produto. Nunca está “pronta”: evolui conforme a equipe e o cliente aprendem.</li>
+            <li><strong>Sprint Backlog</strong> → compromisso: <strong>Meta da Sprint</strong>. São os itens escolhidos para a Sprint mais o plano para entregá-los. Pertence aos Developers.</li>
+            <li><strong>Incremento</strong> → compromisso: <strong>Definição de Pronto</strong>. É cada parte concluída e utilizável do produto. Um item só vira incremento quando atende a todos os critérios de qualidade combinados.</li>
+          </ul>
+
+          <h2>O ciclo completo</h2>
+
+          <p>Juntando tudo, uma Sprint funciona assim:</p>
+
+          <figure class="diagram">
+            <div class="diagram-scroll">
+              <svg viewBox="0 0 680 330" role="img" aria-labelledby="scrum-t scrum-d" xmlns="http://www.w3.org/2000/svg">
+                <title id="scrum-t">Ciclo do Scrum</title>
+                <desc id="scrum-d">O Product Backlog alimenta a Sprint Planning, que gera o Sprint Backlog. A Sprint, de 1 a 4 semanas, tem uma Daily Scrum por dia e gera o Incremento, apresentado na Sprint Review. Depois vem a Retrospectiva, e a próxima Sprint começa com uma nova Sprint Planning.</desc>
+                <defs>
+                  <marker id="seta-scrum" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                    <path d="M0,0 L10,5 L0,10 z" class="dg-arrowhead"/>
+                  </marker>
+                </defs>
+
+                <!-- Linha de cima -->
+                <g class="dg-box">
+                  <rect x="20" y="40" width="130" height="56" rx="8"/>
+                  <rect x="185" y="40" width="130" height="56" rx="8"/>
+                  <rect x="350" y="40" width="130" height="56" rx="8"/>
+                </g>
+                <text x="85" y="73" text-anchor="middle" class="dg-text">Product Backlog</text>
+                <text x="250" y="73" text-anchor="middle" class="dg-text">Sprint Planning</text>
+                <text x="415" y="73" text-anchor="middle" class="dg-text">Sprint Backlog</text>
+
+                <!-- Sprint -->
+                <circle cx="580" cy="165" r="74" class="dg-hi"/>
+                <text x="580" y="145" text-anchor="middle" class="dg-strong">Sprint</text>
+                <text x="580" y="166" text-anchor="middle" class="dg-small">1 a 4 semanas</text>
+                <text x="580" y="192" text-anchor="middle" class="dg-text" style="font-size:13px">Daily Scrum</text>
+                <text x="580" y="209" text-anchor="middle" class="dg-small">todo dia · 15 min</text>
+
+                <!-- Linha de baixo -->
+                <g class="dg-box">
+                  <rect x="350" y="234" width="130" height="56" rx="8"/>
+                  <rect x="185" y="234" width="130" height="56" rx="8"/>
+                  <rect x="20" y="234" width="130" height="56" rx="8"/>
+                </g>
+                <text x="415" y="267" text-anchor="middle" class="dg-text">Incremento</text>
+                <text x="250" y="267" text-anchor="middle" class="dg-text">Sprint Review</text>
+                <text x="85" y="267" text-anchor="middle" class="dg-text">Retrospectiva</text>
+
+                <!-- Setas -->
+                <line x1="150" y1="68" x2="181" y2="68" class="dg-line" marker-end="url(#seta-scrum)"/>
+                <line x1="315" y1="68" x2="346" y2="68" class="dg-line" marker-end="url(#seta-scrum)"/>
+                <line x1="480" y1="68" x2="524" y2="111" class="dg-line" marker-end="url(#seta-scrum)"/>
+                <line x1="526" y1="218" x2="484" y2="258" class="dg-line" marker-end="url(#seta-scrum)"/>
+                <line x1="350" y1="262" x2="319" y2="262" class="dg-line" marker-end="url(#seta-scrum)"/>
+                <line x1="185" y1="262" x2="154" y2="262" class="dg-line" marker-end="url(#seta-scrum)"/>
+                <path d="M85,234 L85,150 L250,150 L250,101" class="dg-line dg-dashed" marker-end="url(#seta-scrum)"/>
+                <text x="168" y="140" text-anchor="middle" class="dg-small">próxima Sprint</text>
+              </svg>
+            </div>
+            <figcaption>Figura 1 — O ciclo do Scrum. Elaborado pela equipe com base no Guia do Scrum (2020).</figcaption>
+          </figure>
+
+          <h2>Um exemplo prático</h2>
+
+          <p>Imagine uma equipe criando um aplicativo de cardápio para a cantina do campus. O Product Owner monta o Product Backlog com itens como “ver o cardápio do dia”, “fazer pedido antecipado” e “pagar pelo app”, e coloca o cardápio do dia no topo, porque é o que mais ajuda os alunos agora.</p>
+
+          <p>Na Sprint Planning de uma Sprint de duas semanas, a equipe define a meta: <em>“o aluno consegue ver o cardápio do dia no celular”</em>. Todos os dias, na Daily, os Developers conferem o andamento. No fim, na Sprint Review, a dona da cantina usa a tela e pede para mostrar o preço de cada prato. Esse pedido vira um novo item do backlog. Na Retrospectiva, a equipe percebe que perdeu tempo esperando o servidor de testes e decide configurá-lo logo no início da próxima Sprint.</p>
+
+          <h2>Vantagens e cuidados</h2>
+
+          <h3>Vantagens</h3>
+          <ul>
+            <li>Feedback rápido do cliente, o que reduz o risco de construir algo que ninguém quer.</li>
+            <li>Mudanças de requisitos são esperadas e entram no backlog sem drama.</li>
+            <li>O progresso fica visível a cada Sprint, não só no fim do projeto.</li>
+            <li>Estrutura simples, fácil de entender e com muito material disponível.</li>
+          </ul>
+
+          <h3>Cuidados</h3>
+          <ul>
+            <li><strong>Scrum só de fachada:</strong> fazer as reuniões sem mudar a forma de trabalhar não traz os benefícios.</li>
+            <li>Depende de um Product Owner disponível e com poder de decisão.</li>
+            <li>Não orienta práticas técnicas (testes, integração contínua), por isso costuma ser combinado com o XP.</li>
+            <li>Para muitos times trabalhando no mesmo produto, precisa de frameworks extras, como Nexus, LeSS ou SAFe.</li>
+          </ul>
+
+          <div class="resumo">
+            <h2>Em resumo</h2>
+            <p>O Scrum organiza o trabalho em Sprints de até um mês, com <strong>3 responsabilidades</strong> (Product Owner, Scrum Master e Developers), <strong>5 eventos</strong> (Sprint, Planning, Daily, Review e Retrospectiva) e <strong>3 artefatos</strong> (Product Backlog, Sprint Backlog e Incremento). É indicado para produtos com requisitos que mudam e para equipes pequenas com acesso direto a quem decide sobre o produto.</p>
+          </div>
+
+          <h2>Referências</h2>
+          <ol class="referencias">
+            <li>SCHWABER, Ken; SUTHERLAND, Jeff. <em>O Guia do Scrum</em>. 2020. Disponível em: <a href="https://scrumguides.org/">https://scrumguides.org/</a>. Acesso em: 21 out. 2026.</li>
+            <li>TAKEUCHI, Hirotaka; NONAKA, Ikujiro. The New New Product Development Game. <em>Harvard Business Review</em>, jan. 1986.</li>
+            <li>BECK, Kent et al. <em>Manifesto para Desenvolvimento Ágil de Software</em>. 2001. Disponível em: <a href="https://agilemanifesto.org/iso/ptbr/manifesto.html">https://agilemanifesto.org/iso/ptbr/manifesto.html</a>. Acesso em: 21 out. 2026.</li>
+            <li>SOMMERVILLE, Ian. <em>Engenharia de Software</em>. 10. ed. São Paulo: Pearson, 2018.</li>
+            <li>PRESSMAN, Roger S.; MAXIM, Bruce R. <em>Engenharia de Software: uma abordagem profissional</em>. 9. ed. Porto Alegre: AMGH, 2021.</li>
+          </ol>
+
+        </div>
+
+        <nav class="post-nav" aria-label="Navegação entre posts">
+          <a href="../index.html"><span>Voltar</span>Início</a>
+          <a class="next" href="dsdm.html"><span>Próximo</span>DSDM: prazo fixo, escopo flexível</a>
+        </nav>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>Diário Ágil · Equipe 2: Bruno Reis Verteiro, Ezequiel Antonio de Souza e Samuel Cerqueira Torres</p>
+      <p>Engenharia de Software II · Profa. Márcia Cristina Dadalto Pascutti · 2º TADS · IFPR Campus Umuarama · 2026</p>
+    </footer>
+
+  </div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

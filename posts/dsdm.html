@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DSDM: prazo fixo, escopo flexível · Diário Ágil</title>
+  <meta name="description" content="O que é o DSDM, seus princípios, fases, técnicas como MoSCoW e timeboxing, e seus papéis.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="site-header">
+      <a class="site-title" href="../index.html">Diário Ágil</a>
+      <p class="site-tagline">Scrum e DSDM explicados pela Equipe 2 · Engenharia de Software II</p>
+      <nav class="site-nav" aria-label="Menu principal">
+        <a href="../index.html">Início</a>
+        <a href="scrum.html">Scrum</a>
+        <a href="dsdm.html" aria-current="page">DSDM</a>
+        <a href="comparativo.html">Comparativo</a>
+        <a href="equipe.html">Equipe</a>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <header class="post-header">
+          <p class="kicker">Método ágil 2</p>
+          <h1>DSDM: prazo fixo, escopo flexível</h1>
+          <p class="post-meta">
+            <time datetime="2026-10-21">21 de outubro de 2026</time><span class="sep">·</span>por Ezequiel Antonio de Souza<span class="sep">·</span><span data-reading-time>7 min de leitura</span>
+          </p>
+        </header>
+
+        <div class="post-body" data-post-body>
+
+          <p class="lede">E se a data de entrega não pudesse mudar de jeito nenhum? O DSDM nasceu para essa situação: em vez de atrasar o projeto para caber tudo, ele garante o prazo e escolhe com cuidado o que entra em cada entrega.</p>
+
+          <h2>O que é o DSDM</h2>
+
+          <p>DSDM é a sigla de <strong>Dynamic Systems Development Method</strong> (Método de Desenvolvimento de Sistemas Dinâmicos). Em alguns materiais ele aparece como <em>Dynamic System Development Model</em>, mas o nome oficial usa “Method”. É um framework ágil que cobre o projeto inteiro, desde a ideia inicial até a avaliação depois da entrega, e não só a parte de programação.</p>
+
+          <p>Ele surgiu no <strong>Reino Unido, em 1994</strong>, criado por um consórcio de empresas, o DSDM Consortium. Na época, o RAD (<em>Rapid Application Development</em>) era muito usado para entregar sistemas rápido, mas cada empresa fazia do seu jeito e a qualidade variava muito. O DSDM veio para dar disciplina ao desenvolvimento rápido.</p>
+
+          <p>Ou seja, o DSDM é mais antigo que o próprio Manifesto Ágil, de 2001, e um representante do consórcio, Arie van Bennekum, foi um dos 17 signatários do Manifesto. O método evoluiu em versões: o DSDM Atern, em 2007, e o <strong>DSDM Agile Project Framework</strong>, em 2014. Em 2016 o consórcio passou a se chamar <strong>Agile Business Consortium</strong>, que mantém o método até hoje.</p>
+
+          <h2>A ideia central: inverter o triângulo</h2>
+
+          <p>Em projetos tradicionais, o escopo é fixado no início, e prazo e custo acabam variando: quando surge um problema, o projeto atrasa ou fica mais caro. O DSDM inverte essa lógica: <strong>prazo, custo e qualidade são fixos</strong>, e o que varia são as <strong>funcionalidades</strong> entregues.</p>
+
+          <p>Isso funciona porque nem tudo tem a mesma importância. O DSDM se apoia na ideia do princípio de Pareto: uma parte menor das funcionalidades costuma gerar a maior parte do valor para o negócio. Se o essencial for entregue no prazo, o projeto cumpriu seu objetivo, mesmo que alguns extras fiquem para depois.</p>
+
+          <h2>Os oito princípios</h2>
+
+          <ol>
+            <li><strong>Foco na necessidade do negócio:</strong> toda decisão deve servir ao objetivo do projeto, não à tecnologia em si.</li>
+            <li><strong>Entregar no prazo:</strong> cumprir a data é inegociável, e isso gera confiança.</li>
+            <li><strong>Colaborar:</strong> pessoas do negócio e da equipe técnica trabalham juntas, todos os dias.</li>
+            <li><strong>Nunca comprometer a qualidade:</strong> o nível de qualidade é combinado no início e não é sacrificado para ganhar tempo.</li>
+            <li><strong>Construir de forma incremental a partir de bases firmes:</strong> entender o suficiente antes de começar e entregar por partes.</li>
+            <li><strong>Desenvolver de forma iterativa:</strong> a solução evolui com feedback constante, aceitando que nem tudo se acerta na primeira vez.</li>
+            <li><strong>Comunicar de forma contínua e clara:</strong> com workshops, modelos, protótipos e conversas diretas, em vez de documentos longos.</li>
+            <li><strong>Demonstrar controle:</strong> planejamento e acompanhamento transparentes, para que todos saibam onde o projeto está.</li>
+          </ol>
+
+          <h2>As fases do projeto</h2>
+
+          <p>Diferente do Scrum, o DSDM define um ciclo de vida com fases. Na versão atual (Agile Project Framework) elas são seis:</p>
+
+          <figure class="diagram">
+            <div class="diagram-scroll">
+              <svg viewBox="0 0 680 310" role="img" aria-labelledby="dsdm-t dsdm-d" xmlns="http://www.w3.org/2000/svg">
+                <title id="dsdm-t">Fases do DSDM</title>
+                <desc id="dsdm-d">Pré-projeto, Viabilidade e Fundamentos acontecem em sequência. Em seguida vem o Desenvolvimento Evolutivo em timeboxes, que gera entregas na Implantação; esse ciclo se repete a cada novo incremento. Por fim, o Pós-projeto avalia os benefícios.</desc>
+                <defs>
+                  <marker id="seta-dsdm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                    <path d="M0,0 L10,5 L0,10 z" class="dg-arrowhead"/>
+                  </marker>
+                </defs>
+
+                <!-- Linha de cima -->
+                <g class="dg-box">
+                  <rect x="20" y="30" width="180" height="62" rx="8"/>
+                  <rect x="250" y="30" width="180" height="62" rx="8"/>
+                  <rect x="480" y="30" width="180" height="62" rx="8"/>
+                </g>
+                <text x="110" y="56" text-anchor="middle" class="dg-text">Pré-projeto</text>
+                <text x="110" y="77" text-anchor="middle" class="dg-small">alinhar com a estratégia</text>
+                <text x="340" y="56" text-anchor="middle" class="dg-text">Viabilidade</text>
+                <text x="340" y="77" text-anchor="middle" class="dg-small">vale a pena seguir?</text>
+                <text x="570" y="56" text-anchor="middle" class="dg-text">Fundamentos</text>
+                <text x="570" y="77" text-anchor="middle" class="dg-small">escopo e arquitetura</text>
+
+                <!-- Linha de baixo -->
+                <g class="dg-box">
+                  <rect x="480" y="180" width="180" height="70" rx="8" class="dg-hi"/>
+                  <rect x="250" y="180" width="180" height="70" rx="8"/>
+                  <rect x="20" y="180" width="180" height="70" rx="8"/>
+                </g>
+                <text x="570" y="203" text-anchor="middle" class="dg-text">Desenvolvimento</text>
+                <text x="570" y="221" text-anchor="middle" class="dg-text">Evolutivo</text>
+                <text x="570" y="240" text-anchor="middle" class="dg-small">timeboxes de 2 a 4 semanas</text>
+                <text x="340" y="210" text-anchor="middle" class="dg-text">Implantação</text>
+                <text x="340" y="231" text-anchor="middle" class="dg-small">entrega ao usuário</text>
+                <text x="110" y="210" text-anchor="middle" class="dg-text">Pós-projeto</text>
+                <text x="110" y="231" text-anchor="middle" class="dg-small">benefícios alcançados?</text>
+
+                <!-- Setas -->
+                <line x1="200" y1="61" x2="246" y2="61" class="dg-line" marker-end="url(#seta-dsdm)"/>
+                <line x1="430" y1="61" x2="476" y2="61" class="dg-line" marker-end="url(#seta-dsdm)"/>
+                <line x1="570" y1="92" x2="570" y2="176" class="dg-line" marker-end="url(#seta-dsdm)"/>
+                <line x1="480" y1="215" x2="434" y2="215" class="dg-line" marker-end="url(#seta-dsdm)"/>
+                <line x1="250" y1="215" x2="204" y2="215" class="dg-line" marker-end="url(#seta-dsdm)"/>
+                <path d="M340,250 L340,280 L570,280 L570,254" class="dg-line dg-dashed" marker-end="url(#seta-dsdm)"/>
+                <text x="455" y="300" text-anchor="middle" class="dg-small">novo incremento</text>
+              </svg>
+            </div>
+            <figcaption>Figura 1 — Fases do DSDM Agile Project Framework. Elaborado pela equipe com base no Agile Business Consortium (2014).</figcaption>
+          </figure>
+
+          <ul>
+            <li><strong>Pré-projeto:</strong> confirma se a ideia está alinhada com os objetivos da organização antes de gastar esforço.</li>
+            <li><strong>Viabilidade:</strong> uma análise rápida para saber se o projeto é viável técnica e financeiramente.</li>
+            <li><strong>Fundamentos:</strong> define o escopo em alto nível, a arquitetura e o plano de entregas. É o “bases firmes” do 5º princípio, sem virar um documento enorme.</li>
+            <li><strong>Desenvolvimento Evolutivo:</strong> a solução é construída e testada em ciclos curtos, com participação direta do negócio.</li>
+            <li><strong>Implantação:</strong> o incremento é colocado em uso. O projeto volta ao Desenvolvimento Evolutivo até concluir todas as entregas.</li>
+            <li><strong>Pós-projeto:</strong> depois de um tempo em uso, verifica se os benefícios esperados realmente aconteceram.</li>
+          </ul>
+
+          <p>Ao pesquisar, vocês vão encontrar nomes diferentes em sites mais antigos: Estudo de Viabilidade, Estudo de Negócio, Iteração do Modelo Funcional, Iteração de Projeto e Construção, e Implementação. É a versão original do DSDM, dos anos 1990. A lógica é a mesma.</p>
+
+          <h2>As técnicas principais</h2>
+
+          <h3>Priorização MoSCoW</h3>
+          <p>Cada requisito recebe uma das quatro categorias abaixo. O nome vem das iniciais em inglês (os “o” só deixam a palavra pronunciável):</p>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Categoria</th><th>Significado</th><th>Exemplo: sistema de matrícula</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Must have</th><td>Obrigatório. Sem isso a entrega não tem sentido ou não é legal.</td><td>Aluno escolhe as disciplinas e confirma a matrícula.</td></tr>
+                <tr><th scope="row">Should have</th><td>Importante, mas existe uma alternativa temporária.</td><td>Comprovante em PDF (a secretaria pode imprimir manualmente).</td></tr>
+                <tr><th scope="row">Could have</th><td>Desejável. É o primeiro a sair se o tempo apertar.</td><td>Aviso por e-mail quando a matrícula é confirmada.</td></tr>
+                <tr><th scope="row">Won't have this time</th><td>Combinado que não entra agora; pode voltar no futuro.</td><td>Aplicativo para celular.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>A regra recomendada é que os itens <em>Must</em> não passem de cerca de <strong>60% do esforço</strong> total, e que os <em>Could</em> fiquem em torno de 20%. Assim sobra uma margem de segurança: se algo der errado, são os <em>Could</em> que saem, e o prazo é mantido.</p>
+
+          <h3>Timeboxing</h3>
+          <p>O trabalho é dividido em períodos de duração fixa, geralmente de <strong>duas a quatro semanas</strong>, cada um com objetivos claros. O prazo do timebox não muda; se algo não couber, a prioridade MoSCoW decide o que fica de fora.</p>
+
+          <h3>Outras técnicas</h3>
+          <ul>
+            <li><strong>Workshops facilitados:</strong> reuniões estruturadas, conduzidas por um facilitador neutro, para tomar decisões rápidas com todos os envolvidos.</li>
+            <li><strong>Modelagem e prototipação:</strong> diagramas e protótipos para que o negócio veja e opine sobre a solução cedo.</li>
+            <li><strong>Desenvolvimento iterativo:</strong> cada parte é construída, revisada pelo negócio e refinada.</li>
+          </ul>
+
+          <h2>Os papéis</h2>
+
+          <p>O DSDM tem bem mais papéis que o Scrum, organizados em três grupos. Uma mesma pessoa pode acumular papéis em projetos pequenos.</p>
+
+          <ul>
+            <li><strong>Nível de projeto:</strong> Patrocinador do Negócio (<em>Business Sponsor</em>), Visionário do Negócio (<em>Business Visionary</em>), Coordenador Técnico, Gerente de Projeto e Analista de Negócio.</li>
+            <li><strong>Nível do time (Solution Development Team):</strong> Líder da Equipe, Embaixador do Negócio (<em>Business Ambassador</em>, que representa os usuários no dia a dia), Desenvolvedor da Solução, Testador da Solução e Analista de Negócio.</li>
+            <li><strong>Apoio:</strong> Consultor de Negócio, Consultor Técnico, Facilitador de Workshops e Coach DSDM.</li>
+          </ul>
+
+          <h2>Um exemplo prático</h2>
+
+          <p>Uma faculdade precisa de um novo sistema de matrícula pronto <strong>antes do início do semestre</strong>. Atrasar não é opção: sem sistema, não há matrícula. Na fase de Fundamentos, a equipe e a secretaria classificam os requisitos com MoSCoW, como na tabela acima. O desenvolvimento acontece em timeboxes de três semanas, com uma funcionária da secretaria atuando como Embaixadora do Negócio. No penúltimo timebox, um problema de integração com o banco de dados atrasa a equipe. Em vez de mudar a data, o aviso por e-mail (<em>Could</em>) sai do escopo, e o sistema entra no ar no dia combinado com tudo o que era essencial.</p>
+
+          <h2>Vantagens e cuidados</h2>
+
+          <h3>Vantagens</h3>
+          <ul>
+            <li>Prazo garantido, ideal quando a data é fixa (lei, evento, contrato).</li>
+            <li>Envolvimento ativo do negócio durante todo o projeto.</li>
+            <li>Governança e controle, o que agrada empresas grandes e projetos com contrato.</li>
+            <li>Cobre o projeto inteiro, inclusive o que vem antes e depois do desenvolvimento.</li>
+          </ul>
+
+          <h3>Cuidados</h3>
+          <ul>
+            <li>Mais papéis e mais formalidade, o que pode pesar em equipes pequenas.</li>
+            <li>Depende de uma priorização honesta: se tudo vira <em>Must</em>, o método não funciona.</li>
+            <li>Menos popular que o Scrum, com menos material e profissionais experientes, especialmente no Brasil.</li>
+            <li>Exige pessoas do negócio com tempo e autoridade para participar.</li>
+          </ul>
+
+          <div class="resumo">
+            <h2>Em resumo</h2>
+            <p>O DSDM é um framework ágil de projeto, nascido no Reino Unido em 1994, que <strong>fixa prazo, custo e qualidade</strong> e deixa o escopo variar. Ele se apoia em <strong>8 princípios</strong>, organiza o projeto em <strong>6 fases</strong> e usa principalmente a <strong>priorização MoSCoW</strong> e o <strong>timeboxing</strong>. É indicado para projetos com data inegociável e que precisam de controle e envolvimento forte do negócio.</p>
+          </div>
+
+          <h2>Referências</h2>
+          <ol class="referencias">
+            <li>AGILE BUSINESS CONSORTIUM. <em>The DSDM Agile Project Framework</em> (Handbook). 2014. Disponível em: <a href="https://www.agilebusiness.org/">https://www.agilebusiness.org/</a>. Acesso em: 21 out. 2026.</li>
+            <li>BECK, Kent et al. <em>Manifesto para Desenvolvimento Ágil de Software</em>. 2001. Disponível em: <a href="https://agilemanifesto.org/iso/ptbr/manifesto.html">https://agilemanifesto.org/iso/ptbr/manifesto.html</a>. Acesso em: 21 out. 2026.</li>
+            <li>SOMMERVILLE, Ian. <em>Engenharia de Software</em>. 10. ed. São Paulo: Pearson, 2018.</li>
+            <li>PRESSMAN, Roger S.; MAXIM, Bruce R. <em>Engenharia de Software: uma abordagem profissional</em>. 9. ed. Porto Alegre: AMGH, 2021.</li>
+          </ol>
+
+        </div>
+
+        <nav class="post-nav" aria-label="Navegação entre posts">
+          <a href="scrum.html"><span>Anterior</span>Scrum</a>
+          <a class="next" href="comparativo.html"><span>Próximo</span>Scrum x DSDM: o comparativo</a>
+        </nav>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>Diário Ágil · Equipe 2: Bruno Reis Verteiro, Ezequiel Antonio de Souza e Samuel Cerqueira Torres</p>
+      <p>Engenharia de Software II · Profa. Márcia Cristina Dadalto Pascutti · 2º TADS · IFPR Campus Umuarama · 2026</p>
+    </footer>
+
+  </div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
