@@ -26,7 +26,7 @@ diario-agil/
 - **Texto de um post:** abra o arquivo em `posts/`, troque o texto entre as tags `<p>` e `</p>` e salve. No GitHub, dá para editar direto no navegador clicando no arquivo e no ícone de lápis.
 - **Data do post:** troque o texto e o atributo `datetime` da tag `<time>` no post e no `index.html`.
 - **Cores:** estão todas no topo do `assets/css/style.css`, nas variáveis `--bg`, `--text`, `--accent` etc. O bloco `@media (prefers-color-scheme: dark)` tem as cores do modo escuro.
-- **Novo post:** copie um arquivo de `posts/`, troque título, autor e conteúdo, e adicione um novo `<li>` no topo da lista do `index.html` (o mais recente fica em cima).
+- **Novo post:** copie um arquivo de `posts/`, troque título, autor e conteúdo, e adicione um novo `<li>` na lista do `index.html`, na posição em que ele deve aparecer.
 
 O tempo de leitura é calculado sozinho pelo `main.js` (200 palavras por minuto). Na página inicial ele está escrito à mão, então atualize se o post mudar muito de tamanho.
 
