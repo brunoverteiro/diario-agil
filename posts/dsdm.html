@@ -54,6 +54,46 @@
 
           <p>Isso funciona porque nem tudo tem a mesma importância. O DSDM se apoia na ideia do princípio de Pareto: uma parte menor das funcionalidades costuma gerar a maior parte do valor para o negócio. Se o essencial for entregue no prazo, o projeto cumpriu seu objetivo, mesmo que alguns extras fiquem para depois.</p>
 
+
+          <figure class="diagram">
+            <div class="diagram-scroll">
+              <svg viewBox="0 0 680 310" role="img" aria-labelledby="tri-t tri-d" xmlns="http://www.w3.org/2000/svg">
+                <title id="tri-t">Triângulo tradicional e triângulo invertido do DSDM</title>
+                <desc id="tri-d">No projeto tradicional, as funcionalidades são fixas e o tempo e o custo variam, e a qualidade costuma sofrer. No DSDM o triângulo se inverte: tempo, custo e qualidade são fixos, e as funcionalidades variam.</desc>
+<defs><marker id="seta-tri" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="dg-arrowhead"/></marker></defs>
+                <text x="170" y="22" text-anchor="middle" class="dg-strong">Projeto tradicional</text>
+                <text x="510" y="22" text-anchor="middle" class="dg-strong">DSDM</text>
+                <polygon points="170,80 60,260 280,260" class="dg-shape"/>
+                <polygon points="400,80 620,80 510,260" class="dg-soft-fill"/>
+                <circle cx="170" cy="80" r="7" class="dg-accent-fill"/>
+                <circle cx="60" cy="260" r="7" class="dg-hollow"/>
+                <circle cx="280" cy="260" r="7" class="dg-hollow"/>
+                <circle cx="400" cy="80" r="7" class="dg-accent-fill"/>
+                <circle cx="620" cy="80" r="7" class="dg-accent-fill"/>
+                <circle cx="510" cy="260" r="7" class="dg-hollow"/>
+                <text x="170" y="52" text-anchor="middle" class="dg-text">Funcionalidades</text>
+                <text x="170" y="68" text-anchor="middle" class="dg-small">fixo</text>
+                <text x="60" y="282" text-anchor="middle" class="dg-text">Tempo</text>
+                <text x="60" y="298" text-anchor="middle" class="dg-small">varia</text>
+                <text x="280" y="282" text-anchor="middle" class="dg-text">Custo</text>
+                <text x="280" y="298" text-anchor="middle" class="dg-small">varia</text>
+                <text x="400" y="52" text-anchor="middle" class="dg-text">Tempo</text>
+                <text x="400" y="68" text-anchor="middle" class="dg-small">fixo</text>
+                <text x="620" y="52" text-anchor="middle" class="dg-text">Custo</text>
+                <text x="620" y="68" text-anchor="middle" class="dg-small">fixo</text>
+                <text x="510" y="282" text-anchor="middle" class="dg-text">Funcionalidades</text>
+                <text x="510" y="298" text-anchor="middle" class="dg-small">varia</text>
+                <text x="170" y="200" text-anchor="middle" class="dg-small">qualidade</text>
+                <text x="170" y="216" text-anchor="middle" class="dg-small">costuma sofrer</text>
+                <text x="510" y="134" text-anchor="middle" class="dg-text">Qualidade</text>
+                <text x="510" y="150" text-anchor="middle" class="dg-small">fixa</text>
+                <line x1="300" y1="170" x2="384" y2="170" class="dg-line" marker-end="url(#seta-tri)"/>
+                <text x="342" y="160" text-anchor="middle" class="dg-small">inverte</text>
+              </svg>
+            </div>
+            <figcaption>Figura 1 — O DSDM inverte o triângulo do projeto: o que era fixo passa a variar. Ponto cheio = fixo; ponto vazado = varia. Elaborado pela equipe com base no Agile Business Consortium (2014).</figcaption>
+          </figure>
+
           <h2>Os oito princípios</h2>
 
           <ol>
@@ -119,7 +159,7 @@
                 <text x="455" y="300" text-anchor="middle" class="dg-small">novo incremento</text>
               </svg>
             </div>
-            <figcaption>Figura 1 — Fases do DSDM Agile Project Framework. Elaborado pela equipe com base no Agile Business Consortium (2014).</figcaption>
+            <figcaption>Figura 2 — Fases do DSDM Agile Project Framework. Elaborado pela equipe com base no Agile Business Consortium (2014).</figcaption>
           </figure>
 
           <ul>
@@ -153,6 +193,30 @@
           </div>
 
           <p>A regra recomendada é que os itens <em>Must</em> não passem de cerca de <strong>60% do esforço</strong> total, e que os <em>Could</em> fiquem em torno de 20%. Assim sobra uma margem de segurança: se algo der errado, são os <em>Could</em> que saem, e o prazo é mantido.</p>
+
+          <figure class="diagram">
+            <div class="diagram-scroll">
+              <svg viewBox="0 0 680 196" role="img" aria-labelledby="moscow-t moscow-d" xmlns="http://www.w3.org/2000/svg">
+                <title id="moscow-t">Distribuição recomendada do esforço na priorização MoSCoW</title>
+                <desc id="moscow-d">Uma barra representa o esforço total de uma entrega: Must have ocupa até cerca de 60%, Should have cerca de 20% e Could have cerca de 20%. Os itens Could formam a margem de segurança e saem primeiro se o tempo apertar. Os itens Won't have ficam fora desta entrega.</desc>
+                <text x="20" y="34" class="dg-small">Esforço total de uma entrega (timebox ou incremento)</text>
+                <rect x="20" y="50" width="384" height="62" class="dg-accent-fill"/>
+                <rect x="404" y="50" width="128" height="62" class="dg-soft-fill"/>
+                <rect x="532" y="50" width="128" height="62" class="dg-shape"/>
+                <text x="212" y="78" text-anchor="middle" class="dg-on-accent" style="font-size:15px">Must have</text>
+                <text x="212" y="98" text-anchor="middle" class="dg-on-accent" style="font-weight:400">até ~60%</text>
+                <text x="468" y="78" text-anchor="middle" class="dg-text">Should have</text>
+                <text x="468" y="98" text-anchor="middle" class="dg-small">~20%</text>
+                <text x="596" y="78" text-anchor="middle" class="dg-text">Could have</text>
+                <text x="596" y="98" text-anchor="middle" class="dg-small">~20%</text>
+                <path d="M532,124 L532,132 L660,132 L660,124" class="dg-line"/>
+                <text x="660" y="152" text-anchor="end" class="dg-small">margem de segurança: sai primeiro se o tempo apertar</text>
+                <text x="20" y="182" class="dg-small">Won't have this time: combinado que fica fora desta entrega</text>
+              </svg>
+            </div>
+            <figcaption>Figura 3 — Distribuição recomendada do esforço entre as categorias MoSCoW. Elaborado pela equipe com base no Agile Business Consortium (2014).</figcaption>
+          </figure>
+
 
           <h3>Timeboxing</h3>
           <p>O trabalho é dividido em períodos de duração fixa, geralmente de <strong>duas a quatro semanas</strong>, cada um com objetivos claros. O prazo do timebox não muda; se algo não couber, a prioridade MoSCoW decide o que fica de fora.</p>

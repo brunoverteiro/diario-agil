@@ -1,5 +1,5 @@
 // Diário Ágil — calcula o tempo de leitura de cada post
-// Conta as palavras do texto do post e divide por 200 palavras por minuto.
+// Conta as palavras do texto do post (sem as ilustrações) e divide por 200 palavras por minuto.
 
 document.addEventListener("DOMContentLoaded", function () {
   var corpo = document.querySelector("[data-post-body]");
@@ -9,7 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
     return; // página sem post (ex.: página inicial)
   }
 
-  var texto = corpo.innerText.trim();
+  // copia o texto e tira as figuras, que não entram na contagem
+  var copia = corpo.cloneNode(true);
+  copia.querySelectorAll("figure").forEach(function (figura) {
+    figura.remove();
+  });
+
+  var texto = copia.textContent.trim();
   var palavras = texto.split(/\s+/).length;
   var minutos = Math.max(1, Math.round(palavras / 200));
 

@@ -298,6 +298,17 @@ tbody th { font-weight: 700; width: 24%; }
 .dg-line       { stroke: var(--accent); stroke-width: 1.75; fill: none; }
 .dg-dashed     { stroke-dasharray: 6 5; }
 .dg-arrowhead  { fill: var(--accent); }
+.dg-box circle { fill: var(--surface); stroke: var(--border); stroke-width: 1.5; }
+.dg-shape      { fill: var(--surface); stroke: var(--border); stroke-width: 1.5; }
+.dg-frame      { fill: none; stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 6 5; }
+.dg-accent-fill{ fill: var(--accent); }
+.dg-soft-fill  { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; }
+.dg-hollow     { fill: var(--bg); stroke: var(--accent); stroke-width: 2; }
+.dg-neutral    { fill: var(--muted); }
+.dg-axis       { stroke: var(--border); stroke-width: 2; }
+.dg-tick       { stroke: var(--border); stroke-width: 1.5; }
+.dg-on-accent  { fill: var(--bg); font-family: var(--sans); font-size: 13px; font-weight: 700; }
+.dg-accent-text{ fill: var(--accent); font-family: var(--sans); font-size: 15px; font-weight: 700; }
 
 /* ---------- Navegação entre posts ---------- */
 .post-nav {
